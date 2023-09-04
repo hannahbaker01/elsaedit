@@ -1068,7 +1068,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://github.com/Devil-Botz/Elsa'),
+            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://github.com/Devil-Botz/GoYoonJung'),
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1790,7 +1790,7 @@ async def manual_filters(client, message, text=False):
                 try:
                     if fileid == "None":
                         if btn == "[]":
-                            elsa = await client.send_message(
+                            GoYoonJung = await client.send_message(
                                 group_id,
                                 reply_text,
                                 disable_web_page_preview=True,
@@ -1809,14 +1809,14 @@ async def manual_filters(client, message, text=False):
                             try:
                                 if settings['auto_delete']:
                                     await asyncio.sleep(600)
-                                    await elsa.delete()
+                                    await GoYoonJung.delete()
                             except KeyError:
                                 grpid = await active_connection(str(message.from_user.id))
                                 await save_group_settings(grpid, 'auto_delete', True)
                                 settings = await get_settings(message.chat.id)
                                 if settings['auto_delete']:
                                     await asyncio.sleep(600)
-                                    await elsa.delete()
+                                    await GoYoonJung.delete()
 
                         else:
                             button = eval(btn)
