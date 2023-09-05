@@ -218,7 +218,6 @@ async def next_page(bot, query):
                )
     btn.insert(1,
                [
-                   InlineKeyboardButton("Send All !", callback_data=f"send_fall#files#{key}#{offset}"),
                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs​", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
                ]
                )
@@ -1532,8 +1531,6 @@ async def auto_filter(client, msg, spoll=False):
                )
     btn.insert(1,
                [
-                   InlineKeyboardButton("Send All !",
-                                        callback_data=f"send_fall#{pre}#{message.chat.id}-{message.id}#{0}"),
                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs​", callback_data=f"languages#{search.replace(' ', '_')}#{key}")
                ]
                )
