@@ -89,6 +89,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 REQ_CHANNEL = environ.get("REQ_CHANNEL", '-1001933051196')
 REQ_CHANNEL = int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
+INVITE_LINK = environ.get("INVITE_LINK", "None")
 
 #url links
 SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
