@@ -8,15 +8,16 @@ from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 from database.join_reqs import JoinReqs
-from info import REQ_CHANNEL, AUTH_CHANNEL, JOIN_REQS_DB, ADMINS, INVITE_LINK
+from info import REQ_CHANNEL, AUTH_CHANNEL, JOIN_REQS_DB, ADMINS
 
 from logging import getLogger
 
 logger = getLogger(__name__)
+INVITE_LINK = None
 db = JoinReqs
 
-
 async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="checksub"):
+
     global INVITE_LINK
     auth = ADMINS.copy() + [1412909688]
     if update.from_user.id in auth:
@@ -79,9 +80,9 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
             raise UserNotParticipant
         # Check if User is Already Joined Channel
         user = await bot.get_chat_member(
-            chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL and not db().isActive() else REQ_CHANNEL),
-            user_id=update.from_user.id
-        )
+                   chat_id=(int(AUTH_CHANNEL) if not REQ_CHANNEL and not db().isActive() else REQ_CHANNEL),
+                   user_id=update.from_user.id
+               )
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=update.from_user.id,
@@ -95,20 +96,20 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
         else:
             return True
     except UserNotParticipant:
-        text = """**Fɪʀsᴛ ᴄʟɪᴄᴋ ᴏɴ Rᴇǫᴜᴇꜱᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ ʙᴜᴛᴛᴏɴ . ᴛʜᴇɴ ᴄᴏᴍᴇ ʙᴀᴄᴋ ᴛᴏ ᴛʜᴇ ʙᴏᴛ ᴄʟɪᴄᴋ ᴏɴ ᴍᴇ ᴊᴏɪɴᴇᴅ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇ...**"""
+        text="""*𝗝𝗢𝗜𝗡 𝗢𝗨𝗥 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗧𝗢 𝗚𝗘𝗧 𝗙𝗜𝗟𝗘, Join and click " 🔄 Try Again 🔄 " button**"""
 
         buttons = [
             [
-                InlineKeyboardButton("🎗 Rᴇǫᴜᴇꜱᴛ Tᴏ Jᴏɪɴ Cʜᴀɴɴᴇʟ 🎗", url=invite_link)
+                InlineKeyboardButton("📢 Request to Join Channel 📢", url=invite_link)
             ],
             [
                 InlineKeyboardButton("㋡ Wʜʏ I'ᴍ Jᴏɪɴɪɴɢ", callback_data='whyjoin')
             ],
             [
-                InlineKeyboardButton("📥 Mᴇ Jᴏɪɴᴇᴅ 📥", callback_data=f"{mode}#{file_id}")
+                InlineKeyboardButton(" 🔄 Try Again 🔄 ", callback_data=f"{mode}#{file_id}")
             ]
         ]
-
+        
         if file_id is False:
             buttons.pop()
 
@@ -139,3 +140,4 @@ async def ForceSub(bot: Client, update: Message, file_id: str = False, mode="che
 def set_global_invite(url: str):
     global INVITE_LINK
     INVITE_LINK = url
+
