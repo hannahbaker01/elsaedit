@@ -99,7 +99,7 @@ IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 #Openai
 AI = is_enabled((environ.get("AI","False")), False)
 OPENAI_API = environ.get("OPENAI_API","0")
-AI_LOGS = int(environ.get("AI_LOGS","-1001778730930")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of Bot ]
+AI_LOGS = int(environ.get("AI_LOGS","-1001806781977")) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of Bot ]
 
 
 #Auto approve
@@ -113,11 +113,11 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 PORT = os.environ.get("PORT", "8080")
 MAX_BTN = int(environ.get('MAX_BTN', "7"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/Hybrid_Nations")
-MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/HybridMovies")
+MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/HYBRID_FILM")
 #Must change this link to work redirect (FILE_FORWORD)
-FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+_JO2mWZ56Hk3ZDZl")
+FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+hWNLMSD1jktkNmVk")
 MSG_ALRT = environ.get('MSG_ALRT', 'Check & Try all my features')
-FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1001778730930'))
+FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1001806781977'))
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Hybrid_Nations')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)

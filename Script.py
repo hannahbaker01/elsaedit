@@ -7,7 +7,7 @@ Help for my commands.</b>"""
 
     ABOUT_TXT = """<b>✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
 ✯ Creator: <a href=https://t.me/Hybrid_Nations>Hybrid Bots</a>
-✯ OTT Updates: <a href=https://t.me/HybridMovies>Hybrid Movies</a>
+✯ OTT Updates: <a href=https://t.me/HYBRID_FILM>Hybrid Movies</a>
 ✯ Dev: <a href=https://t.me/Hybrid_Vamp>HYBRID</a>
 ✯ Library: Pyrogram 2
 ✯ Language: Python 𝟹
@@ -93,7 +93,7 @@ these are the extra features of GoYoonJung
 ⏭️ /song 𝚂𝙾𝙽𝙶 𝙽𝙰𝙼𝙴 
 
 <b>𝚆𝙾𝚁𝙺𝚂 𝙱𝙾𝚃𝙷 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙿𝙼</b>
-@HybridMovies"""
+@HYBRID_FILM"""
 
     VIDEO_TXT = """𝙷𝙴𝙻𝙿 𝚈𝙾𝚄 𝚃𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚅𝙸𝙳𝙴𝙾 𝙵𝚁𝙾𝙼 𝚈𝙾𝚄𝚃𝚄𝙱𝙴.
 • 𝘜𝘴𝘢𝘨𝘦
@@ -170,7 +170,7 @@ To Get Sticker ID
 <b>COMMAND</b> : /font your text (optional)
         <b> Eg:- /font Hello</b>
 
- <i>This feature added by @HybridMovies"""
+ <i>This feature added by @HYBRID_FILM"""
     JSON_TXT = """<b>JSON:</b>
 Bot returns json for all replied messages with /json or /js
 <b>Features:</b>
