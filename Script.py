@@ -6,7 +6,7 @@ My Name is <a href=https://t.me/{}>{}</a>, I can provide Movies, Series, Korean 
 Help for my commands.</b>"""
 
     ABOUT_TXT = """<b>✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
-✯ Creator: <a href=https://t.me/hybrid_bots>Hybrid Bots</a>
+✯ Creator: <a href=https://t.me/Hybrid_Nations>Hybrid Bots</a>
 ✯ OTT Updates: <a href=https://t.me/HybridMovies>Hybrid Movies</a>
 ✯ Dev: <a href=https://t.me/Hybrid_Vamp>HYBRID</a>
 ✯ Library: Pyrogram 2
